@@ -20,13 +20,15 @@
 #include <lib/base/init.h>
 #include <lib/base/init_num.h>
 #include <lib/base/eerror.h>
+#include <lib/gdi/glcddc.h>
+
 
 eEGAMI *eEGAMI::instance;
 
 eEGAMI::eEGAMI()
 {
-	_buffer = NULL;
-	lcdfd = -1;
+	//_buffer = NULL;
+	//lcdfd = -1;
 	locked = 0;
 	instance = this;
 }
@@ -38,9 +40,7 @@ eEGAMI *eEGAMI::getInstance()
 
 eEGAMI::~eEGAMI()
 {
-	if (_buffer)
-		delete [] _buffer;
-	instance = NULL;
+	return;
 }
 
 int eEGAMI::lock()
@@ -49,7 +49,7 @@ int eEGAMI::lock()
 		return -1;
 
 	locked = 1;
-	return lcdfd;
+	return;
 }
 
 void eEGAMI::unlock()
