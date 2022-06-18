@@ -49,7 +49,7 @@ int eEGAMI::lock()
 		return -1;
 
 	locked = 1;
-	return;
+	return 1;
 }
 
 void eEGAMI::unlock()
