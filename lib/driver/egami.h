@@ -6,24 +6,21 @@
 
 class eEGAMI 
 {
-	static eEGAMI *instance;
-
 #ifdef SWIG
 	eEGAMI();
 	~eEGAMI();
+#else
+protected:
+	static eEGAMI *instance;
+	int locked;
 #endif
 public:
+	virtual int lock();
+	virtual void unlock();
+	static eEGAMI *getInstance();
 #ifndef SWIG
 	eEGAMI();
-	~eEGAMI();
+	virtual ~eEGAMI();
 #endif	
-	//eEGAMI();
-	static eEGAMI *getInstance();
-	bool fileExists(const char *filename);
-	bool endsWith(char* base, char* str);
-	bool startsWith(char* base, char* str);
-	char* ReadProcEntry(char *filename);
-	bool checkkernel();
 };
-
 #endif
