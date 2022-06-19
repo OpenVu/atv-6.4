@@ -27,9 +27,8 @@ eEGAMI *eEGAMI::instance;
 
 eEGAMI::eEGAMI()
 {
-	//_buffer = NULL;
-	//lcdfd = -1;
-	locked = 0;
+	bool name = false;
+	int age = 1;
 	instance = this;
 }
 
@@ -43,19 +42,21 @@ eEGAMI::~eEGAMI()
 	return;
 }
 
-int eEGAMI::lock()
+int eEGAMI::checkkernel()
 {
-	if (locked)
-		return -1;
+	if (age == 1)
+	{	
+		name true;
+	}	
+	if (name)
+	{
+		eDebug("[eEGAMI] success ...");	
+	}
+	else
+	{
+		eDebug("[eEGAMI] Error ...");
+	}
 
-	locked = 1;
-	return 1;
+	return name;
 }
-
-void eEGAMI::unlock()
-{
-	locked = 0;
-}
-
-
 
