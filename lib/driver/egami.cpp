@@ -48,15 +48,17 @@ bool eEGAMI::is4digits()
 	{
 		status = false;
 	}
-	return status
+	return status;
 }
 
 int eEGAMI::checkkernel()
 {
-	if (is4digits == 1)
+	if (is4digits(pin) == 1)
 	{
 		eDebug("[eEGAMI] Success ....);
+	}	       
 	else
+	}	       
 		eDebug("[eEGAMI] Error ....);
 	}	       
 	return;
