@@ -27,8 +27,6 @@ eEGAMI *eEGAMI::instance;
 
 eEGAMI::eEGAMI()
 {
-	bool name = false;
-	int age = 1;
 	instance = this;
 }
 
@@ -42,21 +40,25 @@ eEGAMI::~eEGAMI()
 	return;
 }
 
+bool eEGAMI::is4digits()
+{
+	bool status = true;
+	string pin = 1234;
+	if (pin.length() != 4)
+	{
+		status = false;
+	}
+	return status
+}
+
 int eEGAMI::checkkernel()
 {
-	if (age == 1)
-	{	
-		name = true;
-	}	
-	if (name)
+	if (is4digits == 1)
 	{
-		eDebug("[eEGAMI] success ...");	
-	}
+		eDebug("[eEGAMI] Success ....);
 	else
-	{
-		eDebug("[eEGAMI] Error ...");
-	}
-
-	return name;
-}
+		eDebug("[eEGAMI] Error ....);
+	}	       
+	return;
+}	
 
