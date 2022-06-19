@@ -46,7 +46,7 @@ int eEGAMI::checkkernel()
 {
 	if (age == 1)
 	{	
-		name true;
+		name = true;
 	}	
 	if (name)
 	{
