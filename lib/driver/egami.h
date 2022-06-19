@@ -14,7 +14,7 @@ protected:
 	static eEGAMI *instance;
 #endif
 public:
-	bool is4digits(std::string pin);
+	//bool is4digits(std::string pin);
 	int checkkernel();
 	static eEGAMI *getInstance();
 #ifndef SWIG
