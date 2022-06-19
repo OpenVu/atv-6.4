@@ -40,10 +40,10 @@ eEGAMI::~eEGAMI()
 	return;
 }
 
-bool eEGAMI::is4digits()
+bool eEGAMI::is4digits(string pin)
 {
 	bool status = true;
-	string pin = 1234;
+	//string pin = 1234;
 	if (pin.length() != 4)
 	{
 		status = false;
@@ -53,14 +53,14 @@ bool eEGAMI::is4digits()
 
 int eEGAMI::checkkernel()
 {
-	if (is4digits(pin) == 1)
+	string PIN = 1234;
+	if (is4digits(PIN) == 1)
 	{
-		eDebug("[eEGAMI] Success ....);
+		return true;
 	}	       
 	else
 	}	       
-		eDebug("[eEGAMI] Error ....);
+		return false
 	}	       
-	return;
 }	
 
