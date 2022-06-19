@@ -69,13 +69,14 @@ int eEGAMI::checkkernel()
 int eEGAMI::checkkernel()
 {
 	bool status = true;
-	string kernel = 1234;
-	if (kernel.length() != 4)
+	int kernel = 1234;
+	int check = 1234;
+	if (kernel != check)
 	{
 		status = false;
 	}
 	return status;
-	if (kernel.length() == 1)
+	if (kernel == check)
 	{
 		status = true;
 	}
