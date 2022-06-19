@@ -12,15 +12,14 @@ class eEGAMI
 #else
 protected:
 	static eEGAMI *instance;
-	int locked;
+	int age;
 #endif
 public:
-	virtual int lock();
-	virtual void unlock();
+	int checkkernel();
 	static eEGAMI *getInstance();
 #ifndef SWIG
 	eEGAMI();
-	virtual ~eEGAMI();
+	~eEGAMI();
 #endif	
 };
 #endif
