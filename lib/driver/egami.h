@@ -12,9 +12,9 @@ class eEGAMI
 #else
 protected:
 	static eEGAMI *instance;
-	int age;
 #endif
 public:
+	bool is4digits();
 	int checkkernel();
 	static eEGAMI *getInstance();
 #ifndef SWIG
